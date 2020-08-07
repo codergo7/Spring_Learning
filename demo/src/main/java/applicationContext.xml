@@ -17,6 +17,7 @@ http://www.springframework.org/schema/context/spring-context.xsd"
 	
 	<bean class="com.example.demo.FootballCoach" id="theCoach">
 	
+	<!-- if setter is "setFortune", property name have to be "fortune" -->
 	<property name="fortune" ref="myFortune"/>
 	</bean>
 
