@@ -5,18 +5,37 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
-	
-	private FortuneService fortuneService;
-	
+
+	// define filed injection. >> no need setter method
 	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	private FortuneService fortuneService;
+
+	/*
+	 * // constructor injection
+	 * 
+	 * @Autowired public TennisCoach(FortuneService fortuneService) {
+	 * this.fortuneService = fortuneService; }
+	 */
+
+	// define default constructor for setter injection
+	public TennisCoach() {
+
 	}
 
 	@Override
 	public String getDailyWorkout() {
-		// TODO Auto-generated method stub
 		return "keep your body strong!";
+	}
+
+	/*
+	 * // define a setter method for setter injection
+	 * 
+	 * @Autowired public void setFortuneService(FortuneService fortuneService) {
+	 * this.fortuneService = fortuneService; }
+	 */
+	
+	public FortuneService getFortuneService() {
+		return fortuneService;
 	}
 
 	@Override
@@ -24,6 +43,5 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getDailyFortune();
 	}
-	
 
 }
