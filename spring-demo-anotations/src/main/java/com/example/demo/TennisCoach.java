@@ -31,7 +31,7 @@ public class TennisCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "keep your body strong!";
+		return "Keep your body strong!";
 	}
 	
 
@@ -56,14 +56,15 @@ public class TennisCoach implements Coach {
 	
 		@PostConstruct
 		public void testPostConstructMedhod() {
-			System.out.println(">>> Used @PostConstruct annotation");
+			System.out.println("--->>> Intit method using @PostConstruct annotation");
 		}
 		
 		// define destroy method
+		//NOTE: For "prototype" scoped beans, Spring does not call the @PreDestroy method.
 		
 		@PreDestroy
 		public void testPreDesyroyMedhod() {
-			System.out.println( "Used @PreDestroy annotation >>>");
+			System.out.println( "--->>> destroy method using @PreDestroy annotation");
 		}
 
 }
