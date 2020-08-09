@@ -3,10 +3,12 @@ package com.example.demo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 //@ComponentScan("com.example.demo") ************ test here. 
 //if here is made uncomment, it will be worked init and destroy method in TennisCoach
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 		
 	// define a bean for SadFortuneService with @Bean

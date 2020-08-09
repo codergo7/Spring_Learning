@@ -18,6 +18,12 @@ public class SwimJavaConfigDemoApp {
 		System.out.println(coach.getDailyWorkout());
 		
 		System.out.println(coach.getFortune());
+				
+		// call the getters of SwimCoach 
+		SwimCoach swimCoach = (SwimCoach) coach;
+		System.out.println("Email: " + swimCoach.getEmail());
+		System.out.println("Team: " + swimCoach.getTeam());
+		
 		// close the context
 		context.close();
 
