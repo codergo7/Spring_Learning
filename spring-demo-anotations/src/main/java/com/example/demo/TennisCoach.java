@@ -2,9 +2,11 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")  //@Scope("singleton")
 public class TennisCoach implements Coach {
 
 	// define filed injection. >> no need setter method
