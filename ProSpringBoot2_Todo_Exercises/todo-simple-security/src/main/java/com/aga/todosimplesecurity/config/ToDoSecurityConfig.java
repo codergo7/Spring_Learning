@@ -61,8 +61,10 @@ logout is successful, it redirects to the "/login" endpoint/page.
                 .formLogin().loginPage("/login").permitAll()
                 .and()
                 .logout()
-                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/login");
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/login")
+                .and()
+                .httpBasic();
     }
 
 
